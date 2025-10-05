@@ -3,8 +3,11 @@ package com.hmall.item;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
 
 @MapperScan("com.hmall.item.mapper")
+@EnableFeignClients(basePackages = "com.hmall.api.client") // 指向公共模块Feign接口包
 @SpringBootApplication
 public class ItemApplication {
     public static void main(String[] args) {

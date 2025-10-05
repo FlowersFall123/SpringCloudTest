@@ -68,7 +68,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     @Override
     public List<CartVO> queryMyCarts() {
-//        TODO 先使用假数据
+
         // 1.查询我的购物车列表
         List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1).list();
 
