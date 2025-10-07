@@ -1,0 +1,45 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: hm-gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.195.131:8848
+    gateway:
+      routes:
+        - id: item-service #微服务名称
+          uri: lb://item-service #lb表示负载均衡，后面跟的是微服务名称
+          predicates:
+            - Path=/items/** #路径匹配
+            - Path=/search/** #路径匹配
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**,/addresses/**
+        - id: pay-service
+          uri: lb://pay-service
+          predicates:
+            - Path=/pay-orders/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/orders/**
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/carts/**,/addresses/**
+      default-filters:
+        - AddRequestHeader=token,*asjdklj1
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi
