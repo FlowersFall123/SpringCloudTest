@@ -12,3 +12,4 @@ spring:
           - dataId: jdbc.yaml # 共享mybatis配置
           - dataId: log.yaml # 共享日志配置
           - dataId: seata.yaml # 共享日seata配置
+          - dataId: mq.yaml # 共享mq配置

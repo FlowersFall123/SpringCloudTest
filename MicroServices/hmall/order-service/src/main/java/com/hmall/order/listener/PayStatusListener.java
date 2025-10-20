@@ -1,0 +1,25 @@
+package com.hmall.order.listener;
+
+import com.hmall.order.service.IOrderService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.annotation.Exchange;
+import org.springframework.amqp.rabbit.annotation.Queue;
+import org.springframework.amqp.rabbit.annotation.QueueBinding;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class PayStatusListener {
+
+    private final IOrderService iOrderService;
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(name = "order.pay.success.queue",declare = "true"),
+            exchange = @Exchange(name="pay.direct",type = "direct"),
+            key = "pay.success"
+    ))
+    public void listenerPaySuccess(Long orderId){
+        iOrderService.markOrderPaySuccess(orderId);
+    }
+}

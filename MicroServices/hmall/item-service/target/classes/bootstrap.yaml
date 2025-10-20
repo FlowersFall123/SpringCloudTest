@@ -11,4 +11,4 @@ spring:
         shared-configs: # 共享配置
           - dataId: jdbc.yaml # 共享mybatis配置
           - dataId: log.yaml # 共享日志配置
-          - dataId: seata.yaml # 共享日seata配置
+          - dataId:  seata.yaml # 共享日seata配置

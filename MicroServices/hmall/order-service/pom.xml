@@ -18,6 +18,11 @@
     </properties>
 
     <dependencies>
+        <!-- Sentinel 服务保护依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
         <!--统一配置管理-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -63,6 +68,11 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- AMQP 依赖（包含 RabbitMQ） -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
         <!-- OpenFeign -->

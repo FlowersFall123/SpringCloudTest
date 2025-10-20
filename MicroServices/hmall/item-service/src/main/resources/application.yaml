@@ -6,3 +6,9 @@ hm:
 feign:
   okhttp:
     enabled: true # 启用 OKHttp
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090  # Sentinel 控制台地址
+      http-method-specify: true     # 是否将 HTTP 方法作为资源名一部分
