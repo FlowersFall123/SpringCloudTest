@@ -1,6 +1,8 @@
 logging:
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+  level:
+    com.itheima: debug
 spring:
   rabbitmq:
     host: 192.168.195.131 # 你的虚拟机IP
@@ -11,3 +13,7 @@ spring:
     listener:
       simple:
         prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息
+    publisher-confirm-type: correlated # 开启publisher confirm机制，并设置confirm类型
+    publisher-returns: true # 开启publisher return机制
+    template:
+      mandatory: true                   # 必须设置为 true，否则 ReturnCallback 不会触发

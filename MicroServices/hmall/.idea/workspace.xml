@@ -5,89 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ffcb4f-e6a4-4a91-882b-022ae2fee895" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/CartClientFallbackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/OrderClientFallbackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/PayClientFallbackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/UserClientFallbackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hm-common/src/main/java/com/hmall/common/config/MqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/listener/PayStatusListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pay-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/.idea/ApifoxUploaderProjectSetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/java/com/itheima/consumer/config/FanoutConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/java/com/itheima/consumer/mq/SpringRabbitListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mq-demo/publisher/src/test/java/com/itheima/publisher/SpringAmqpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hmall-nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/../hmall-nginx/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hmall-nginx/logs/nginx.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../hmall-nginx/logs/nginx.pid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/dto/PayOrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/constants/MQConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/listener/OrderDelayMessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/java/com/itheima/consumer/config/ErrorMessageConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/java/com/itheima/consumer/config/NormalConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mq-demo/publisher/src/main/java/com/itheima/publisher/config/MyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/target/classes/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/target/classes/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/CartClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/CartClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/OrderClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/PayClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/PayClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/CartClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/CartClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/OrderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/OrderClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/config/DefaultFeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/config/DefaultFeignConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/PayClientFallbackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/PayClientFallbackFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/PayClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/PayClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/UserClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/client/UserClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hm-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-common/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/hm-common/src/main/resources/META-INF/spring.factories" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-common/target/classes/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/hm-common/target/classes/META-INF/spring.factories" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-service/target/classes/com/hmall/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-service/target/classes/com/hmall/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item-service/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item-service/target/classes/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/target/classes/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/config/DefaultFeignConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/config/DefaultFeignConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/config/DefaultFeignConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/config/DefaultFeignConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/fallback/PayClientFallbackFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/fallback/PayClientFallbackFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/fallback/PayClientFallbackFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/target/classes/com/hmall/api/fallback/PayClientFallbackFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-common/src/main/java/com/hmall/common/config/MqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-common/src/main/java/com/hmall/common/config/MqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-common/target/classes/com/hmall/common/config/MqConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/hm-common/target/classes/com/hmall/common/config/MqConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/cart-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-03.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-04.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-06.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-07.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-07.1.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-07.2.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-07.3.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-07.4.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hm-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/hm-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hm-service/spring.log.2025-10-02.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log.2025-10-13.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/item-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log.2025-10-03.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log.2025-10-04.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log.2025-10-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log.2025-10-06.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log.2025-10-07.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log.2025-10-13.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/order-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/order-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/order-service/spring.log.2025-10-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/order-service/spring.log.2025-10-06.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/order-service/spring.log.2025-10-07.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/order-service/spring.log.2025-10-13.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pay-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pay-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/pay-service/spring.log.2025-10-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/pay-service/spring.log.2025-10-06.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/pay-service/spring.log.2025-10-07.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/pay-service/spring.log.2025-10-13.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/user-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/user-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/user-service/spring.log.2025-10-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/user-service/spring.log.2025-10-06.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/user-service/spring.log.2025-10-07.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/user-service/spring.log.2025-10-13.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/service/IOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/service/Impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/hmall/order/service/Impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/hmall/order/service/IOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/hmall/order/service/IOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/hmall/order/service/Impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/hmall/order/service/Impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pay-service/src/main/java/com/hmall/pay/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/src/main/java/com/hmall/pay/controller/PayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pay-service/src/main/java/com/hmall/pay/service/Impl/PayOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/src/main/java/com/hmall/pay/service/Impl/PayOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay-service/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pay-service/target/classes/com/hmall/pay/controller/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/target/classes/com/hmall/pay/controller/PayController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pay-service/target/classes/com/hmall/pay/service/Impl/PayOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/pay-service/target/classes/com/hmall/pay/service/Impl/PayOrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/java/com/itheima/consumer/mq/SpringRabbitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/java/com/itheima/consumer/mq/SpringRabbitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/consumer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/com/itheima/consumer/ConsumerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/com/itheima/consumer/ConsumerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/com/itheima/consumer/config/FanoutConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/com/itheima/consumer/config/FanoutConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/com/itheima/consumer/mq/SpringRabbitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/consumer/target/classes/com/itheima/consumer/mq/SpringRabbitListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/publisher/src/main/java/com/itheima/publisher/PublisherApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/publisher/src/main/java/com/itheima/publisher/PublisherApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/publisher/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/publisher/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/publisher/src/test/java/com/itheima/publisher/SpringAmqpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/publisher/src/test/java/com/itheima/publisher/SpringAmqpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/publisher/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/publisher/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/publisher/target/classes/com/itheima/publisher/PublisherApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/publisher/target/classes/com/itheima/publisher/PublisherApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mq-demo/publisher/target/test-classes/com/itheima/publisher/SpringAmqpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../mq-demo/publisher/target/test-classes/com/itheima/publisher/SpringAmqpTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +63,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -170,7 +135,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.itangcent.idea.plugin.configurable.rootConfigurable.apifox&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -329,9 +294,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.PayApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -373,6 +338,10 @@
       <workItem from="1760871207941" duration="662000" />
       <workItem from="1760933453965" duration="1645000" />
       <workItem from="1760958126185" duration="3571000" />
+      <workItem from="1761006725553" duration="3106000" />
+      <workItem from="1761184334733" duration="625000" />
+      <workItem from="1761198977986" duration="1642000" />
+      <workItem from="1761275636535" duration="6264000" />
     </task>
     <servers />
   </component>

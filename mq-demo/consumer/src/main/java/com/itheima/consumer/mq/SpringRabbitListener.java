@@ -1,15 +1,19 @@
 package com.itheima.consumer.mq;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.ExchangeTypes;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Objects;
 
+@Slf4j
 @Component
 public class SpringRabbitListener {
     @RabbitListener(queues="simple.queue")
@@ -61,7 +65,27 @@ public class SpringRabbitListener {
     }
 
     @RabbitListener(queues="object.queue")
-    public void listenObjectQueue( Map<String,Object> message) throws InterruptedException {
+    public void listenObjectQueue(Message message) throws InterruptedException {
+        log.info("消息的ID为：【{}】",message.getMessageProperties().getMessageId());
+        log.info("消息为：【{}】", new String(message.getBody()));
         System.out.println("object.queue的消息: "+message);
+    }
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(name = "dlx.queue"),
+            exchange = @Exchange(name = "dlx.direct", type = ExchangeTypes.DIRECT),
+            key = {"dlx"}
+    ))
+    public void listenDlxQueue(String message) throws InterruptedException {
+        System.out.println("dlx.queue的消息: "+message);
+    }
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(name = "delay.queue", durable = "true"),
+            exchange = @Exchange(name = "delay.direct", delayed = "true"),
+            key = "delay"
+    ))
+    public void listenDelayMessage(String msg){
+        log.info("接收到delay.queue的延迟消息：{}", msg);
     }
 }

@@ -9,6 +9,7 @@ import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.utils.UserContext;
 
+import com.hmall.order.constants.MQConstants;
 import com.hmall.order.domain.dto.OrderFormDTO;
 import com.hmall.order.domain.po.Order;
 import com.hmall.order.domain.po.OrderDetail;
@@ -17,6 +18,7 @@ import com.hmall.order.service.IOrderDetailService;
 import com.hmall.order.service.IOrderService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,6 +44,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final ItemClient itemClient;
     private final IOrderDetailService detailService;
     private final CartClient cartClient;
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     @GlobalTransactional
@@ -85,6 +88,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         } catch (Exception e) {
             throw new RuntimeException("库存不足！");
         }
+
+        //5.发送延迟消息
+        rabbitTemplate.convertAndSend(MQConstants.DELAY_EXCHANGE_NAME,MQConstants.DELAY_ORDER_KEY,order.getId(),message -> {
+            message.getMessageProperties().setDelay(10000);
+            return message;
+        });
         return order.getId();
     }
 
@@ -95,6 +104,14 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setStatus(2);
         order.setPayTime(LocalDateTime.now());
         updateById(order);
+    }
+
+    //TODO 取消订单
+    @Override
+    public void cancelOrder(Long id) {
+        //标记订单关闭
+
+        //回复库存
     }
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {
